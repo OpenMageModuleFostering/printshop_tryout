@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Printshop_Sales>
+            <active>true</active>
+           <codePool>community</codePool>
+       </Printshop_Sales>
+    </modules>
+</config>

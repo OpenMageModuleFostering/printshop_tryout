@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout>
+    <adminhtml_sales_order_view>
+        <reference name="sales_order_tabs">
+            <action method="addTab"><name>order_productpdf</name>
+                <block>productpdf/adminhtml_sales_order_view_tab_productpdf</block>
+            </action>
+        </reference>
+
+    </adminhtml_sales_order_view>
+    <adminhtml_sales_order_productpdf>
+        <reference name="left">
+            <block type="adminhtml/sales_order_view_tabs" name="sales_order_tabs">
+                <block type="adminhtml/sales_order_view_info" name="order_info" template="sales/order/view/info.phtml"></block>
+           </block>
+                
+                
+         </reference>
+        <reference name="content">
+            <block type="adminhtml/sales_order" name="sales_order.productpdf" template="productpdf/sales/order/view/tab/userpdf.phtml" />
+            
+        </reference>
+        
+    </adminhtml_sales_order_productpdf>
+</layout>

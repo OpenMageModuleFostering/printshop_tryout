@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Printshop_Page>
+            <version>1.1.5</version>
+        </Printshop_Page>
+    </modules>
+    <global>
+        <blocks>
+            <Printshop_page>
+                <class>Printshop_Page_Block</class>
+            </Printshop_page>
+            <page>
+                <rewrite>
+                    <html_head>Printshop_Page_Block_Html_Head</html_head>
+                </rewrite>
+            </page>
+        </blocks>
+    </global>
+	<frontend>
+        <routers>
+            <page>
+                <args>
+                    <modules>
+                        <Printshop_Page before="Mage_Page">Printshop_Page</Printshop_Page>
+                    </modules>
+                </args>
+            </page>
+        </routers>
+    </frontend>
+</config>

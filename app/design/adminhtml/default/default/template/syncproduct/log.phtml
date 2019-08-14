@@ -1,0 +1,23 @@
+<?php
+$logFile = "./var". DS. "synclog". DS. "log.txt";
+$logFileContent = file_get_contents($logFile);
+if(file_exists($logFile))
+    $getFileContent= explode("\n" ,file_get_contents($logFile));?>
+<div style="border:1px solid black;padding: 10px; height:400px; overflow:auto;">
+    <table width="80%" align="center" cellpadding="2" cellspacing="2">
+        <?php if((!file_exists($logFile)) || (empty($logFileContent))):?>
+        <tr>
+            <td><?php echo $this->__('No log is generated')?></td>
+        </tr>
+        <?php else:?>
+        <?php foreach($getFileContent as $log) {?>
+        <tr>
+                    <?php $logRecords = explode("\t", $log);?>
+                    <?php foreach($logRecords as $data) {?>
+            <td><?php echo $data ?></td>
+                        <?php }?>
+        </tr>
+         <?php }?>
+        <?php endif?>
+    </table>
+</div>

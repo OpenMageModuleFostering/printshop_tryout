@@ -1,0 +1,64 @@
+<adminhtml>
+<!--    <menu>
+        <system module="system">
+            <title>System</title>
+            <sort_order>90</sort_order>
+            <children>
+                <items module="syncproduct">
+                    <title>Web2Print Synchronize</title>
+                    <sort_order>120</sort_order>
+                    <action>syncproduct/adminhtml_syncproduct</action>
+                </items>
+            </children>
+        </system>
+    </menu>-->
+     <menu>
+        <system module="system">
+            <title>System</title>
+            <sort_order>90</sort_order>
+            <children>
+                <items module="syncproduct">
+                    <title>PrintShop Extensions</title>
+                    <sort_order>120</sort_order>
+<!--                    <action>syncproduct/adminhtml_syncproduct</action>-->
+<!--                    <children>
+                        <items1 module="getquote">
+                            <title>Get Quote</title>
+                            <sort_order>121</sort_order>
+                            <action>getquote/adminhtml_getquote</action>
+                        </items1>
+                    </children>-->
+                    <children>
+                        <items2 module="syncproduct">
+                            <title>PrintShop Synchronize</title>
+                            <sort_order>122</sort_order>
+                            <action>syncproduct/adminhtml_syncproduct</action>
+                        </items2>
+                    </children>
+                </items>
+            </children>
+        </system>
+    </menu>
+    <acl>
+        <resources>
+            <all>
+                <title>Allow Everything</title>
+            </all>
+            <admin>
+                <children>
+                    <Printshop_Syncproduct>
+                        <title>Syncproduct Module</title>
+                        <sort_order>31</sort_order>
+                    </Printshop_Syncproduct>
+                </children>
+            </admin>
+        </resources>
+    </acl>
+    <layout>
+        <updates>
+            <syncproduct>
+                <file>syncproduct.xml</file>
+            </syncproduct>
+        </updates>
+    </layout>
+</adminhtml>

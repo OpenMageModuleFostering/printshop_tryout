@@ -1,0 +1,51 @@
+<?php
+$arrData = Mage::registry('adminData');
+?>
+<div id="syncproduct_tabs_form_section_content"><div class="entry-edit">
+        <div class="content-header">
+            <h3 class="icon-head head-adminhtml-syncproduct">Admin Connection Setup</h3>
+            <p class="form-buttons"><button style="" onclick="credentialsForm.submit();" class="scalable save" type="button" id="id_81d3377e908884e6e85315cdb272b4f7"><span>Save Data</span></button></p>
+        </div>
+
+        <div class="entry-edit">
+            <form method="post" action="<?php echo $this->getUrl('*/*/adminsetup');?>" id="credentials_form" name="credentials_form"><div><input type="hidden" value="<?php echo Mage::getSingleton('core/session')->getFormKey()?>" name="form_key"></div>
+                <div style="" id="syncproduct_tabs_form_section_content"><div class="entry-edit">
+                        <div class="entry-edit-head">
+                            <h4 class="icon-head head-edit-form fieldset-legend">Magento-iBright Admin Connection</h4>
+                            <div class="form-buttons"></div>
+                        </div>
+                        <div id="syncproduct_form" class="fieldset ">
+                            <div class="hor-scroll">
+                                <table cellspacing="0" class="form-list">
+                                    <tbody>
+                                        <tr>
+                                            <td class="label"><label for="ibrighturl">iBright Server <span class="required">*</span></label></td>
+                                            <td class="value">
+                                                <input type="text" style="width:450px;" class="required-entry input-text required-entry" title="iBright Server" name="ibrighturl" id="ibrighturl" value="<?php echo $arrData['ibright_url']; ?>" />
+											</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="label"><label for="ibrightuser">User <span class="required">*</span></label></td>
+                                            <td class="value">
+                                                <input type="text" style="width:150px;" class="required-entry input-text required-entry" title="User" name="ibrightuser" id="ibrightuser" value="<?php echo $arrData['ibright_login']; ?>" />
+											</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="label"><label for="ibrightpassword">Password <span class="required">*</span></label></td>
+                                            <td class="value">
+                                                <input type="password" style="width:150px;" class="required-entry input-text required-entry" title="Password" name="ibrightpassword" id="ibrightpassword" value="<?php echo base64_decode($arrData['ibright_password']); ?>" />
+											</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    credentialsForm = new varienForm('credentials_form', '');
+</script>

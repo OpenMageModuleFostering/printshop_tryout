@@ -1,0 +1,67 @@
+button.button-orange span {background:transparent url(/media/web2print/images/bkg_btn_orange.png) 0 0 no-repeat !important;}
+button.button-orange span span { background-position:100% 0 !important; }
+/* Copy Template css */
+	#copyTemplateFormContainer {
+	position:fixed;
+	left:42%;
+	top:30%;
+	z-index:1000;
+	}
+
+/* Hides the whole contact form until needed */
+#copyTemplateForm {
+	height:200px;width:440px;
+	background:#FFFFFF;
+	border:1px solid #666666;
+	padding:5px 5px;
+	color:#000;
+	display:none;
+	}
+/* Some styling for the close button */
+.copyTemplate{
+	height:22px; width:22px;
+	background:url(/media/web2print/images/cross.png) no-repeat;
+	position:absolute;
+	left:426px; top:4px;
+	cursor:pointer;
+	}
+#backgroundPopup{
+	display:none;
+	position:fixed;
+	height:100%; width:100%;
+	top:0; left:0;
+	background:#3c3c3c;
+	overflow:hidden;
+	opacity:0.6;
+	filter:alpha(opacity=60); /* For IE8 and earlier */
+	z-index:200;
+}
+
+.panel-heading h2 {
+    font-size: 1.5em !important;
+    line-height: 1.25;
+    margin-bottom: 0.45em;}
+button.button {
+    background: none ;
+    border: 0 none;
+    cursor: pointer;
+    margin: 0;
+    overflow: visible;
+    padding: 0;
+    width: auto;
+}
+button.button span {
+    background: url("/media/web2print/images/bkg_btn.png") no-repeat scroll 0 0 transparent;
+    color: #555555;
+    float: left;
+    font: bold 11px/25px Tahoma,Verdana,Arial,sans-serif;
+    height: 28px;
+    padding: 0 0 0 6px;
+    text-align: center;
+    text-transform: uppercase;
+    white-space: nowrap; border:0;
+}
+button.button span span {
+    background-position: 100% 0;
+    padding: 0 15px 0 9px;
+}

@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    <syncproduct_adminhtml_syncproduct_index>
+        <reference name="left">
+            <block type="syncproduct/adminhtml_syncproduct_edit_tabs" name="syncproduct/adminhtml_syncproduct_edit_tabs" />
+        </reference>
+        <reference name="content">
+            <block type="syncproduct/adminhtml_syncproduct_edit" name="syncproduct/adminhtml_syncproduct_edit" template="syncproduct/edit.phtml" />
+            <block type="syncproduct/adminhtml_syncproduct" name="syncproduct/adminhtml_syncproduct" />
+        </reference>
+
+    </syncproduct_adminhtml_syncproduct_index>
+    <syncproduct_adminhtml_syncproduct_synclog>
+        <reference name="left">
+            <block type="syncproduct/adminhtml_syncproduct_synclog_tabs" name="syncproduct/adminhtml_syncproduct_edit_tabs" />
+        </reference>
+        <reference name="content">
+            <block type="syncproduct/adminhtml_syncproduct_synclog" name="syncproduct/adminhtml_syncproduct" template="syncproduct/log.phtml" />
+        </reference>
+
+    </syncproduct_adminhtml_syncproduct_synclog>
+    <syncproduct_adminhtml_syncproduct_frontendsetup>
+        <reference name="left">
+            <block type="syncproduct/adminhtml_syncproduct_frontendsetup_tabs" name="syncproduct/adminhtml_syncproduct_edit_tabs" />
+        </reference>
+        <reference name="content">
+            <block type="syncproduct/adminhtml_syncproduct_frontendsetup" name="syncproduct/adminhtml_syncproduct" template="syncproduct/frontendsetup.phtml" />
+        </reference>
+    </syncproduct_adminhtml_syncproduct_frontendsetup>
+    <syncproduct_adminhtml_syncproduct_adminsetup>
+        <reference name="left">
+            <block type="syncproduct/adminhtml_syncproduct_adminsetup_tabs" name="syncproduct/adminhtml_syncproduct_edit_tabs" />
+        </reference>
+        <reference name="content">
+            <block type="syncproduct/adminhtml_syncproduct_adminsetup" name="syncproduct/adminhtml_syncproduct" template="syncproduct/adminsetup.phtml" />
+        </reference>
+    </syncproduct_adminhtml_syncproduct_adminsetup>
+	<syncproduct_adminhtml_syncproduct_guestsetup>
+        <reference name="left">
+            <block type="syncproduct/adminhtml_syncproduct_guestsetup_tabs" name="syncproduct/adminhtml_syncproduct_edit_tabs" />
+        </reference>
+        <reference name="content">
+            <block type="syncproduct/adminhtml_syncproduct_guestsetup" name="syncproduct/adminhtml_syncproduct" template="syncproduct/guestsetup.phtml" />
+        </reference>
+    </syncproduct_adminhtml_syncproduct_guestsetup>
+</layout>

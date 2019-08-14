@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <modules>
+        <Printshop_Productpdf>
+            <version>1.1.5</version>
+        </Printshop_Productpdf>
+    </modules>
+    <admin>
+        <routers>
+            <adminhtml>
+                <args>
+                    <modules>
+                        <!-- Override Adminhtml module here. -->
+                        <Printshop_Productpdf_Adminhtml before="Mage_Adminhtml">Printshop_Productpdf_Adminhtml</Printshop_Productpdf_Adminhtml>
+                    </modules>
+                </args>
+            </adminhtml>
+        </routers>
+    </admin>
+    <adminhtml>
+        <layout>
+            <updates>
+                <productpdf>
+                    <file>productpdf.xml</file>
+                </productpdf>
+            </updates>
+        </layout>
+    </adminhtml>
+    <global>
+        <blocks>
+            <productpdf>
+                <class>Printshop_Productpdf_Block</class>
+            </productpdf>
+        </blocks>
+    <!-- models, resources, etc -->
+    </global>
+</config>

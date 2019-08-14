@@ -1,0 +1,25 @@
+<div class="content-header">
+    <h3 class="icon-head head-adminhtml-syncproduct">Go Import Data &gt;&gt;</h3><p class="form-buttons"><button style="" onclick="showLoader();" class="scalable save" type="button"><span>Go &gt;&gt; Import Product Data</span></button></p>
+</div>
+<div style="left: -2px; top: 0px; width: 1349px; height: 1324px;display:none;" id="loading-mask">
+<p id="loading_mask_loader" class="loader"><img alt="Loading..." src="<?php echo $this->getSkinUrl('images/ajax-loader-tr.gif') ?>" /><br>Please wait...</p>
+</div>
+
+<div class="entry-edit">
+    <form method="post" action="<?php echo $this->getUrl('*/*/importproduct');?>" id="edit_form">
+		<div><input type="hidden" value="<?php echo Mage::getSingleton('core/session')->getFormKey()?>" name="form_key"></div>
+		<div style="" id="syncproduct_tabs_form_section_content">
+			<div class="entry-edit"></div>
+		</div>
+		<div style="display:none;" id="syncproduct_tabs_syncproduct_logs_content"></div>
+		<div style="display:none;" id="syncproduct_tabs_frontend_credentails_content"></div>
+		<div style="display:none;" id="syncproduct_tabs_admin_setup_content"></div>
+	</form>
+</div>
+<script type="text/javascript">
+editForm = new varienForm('edit_form');
+function showLoader(){
+	$('loading-mask').show();
+	editForm.submit()
+}
+</script>

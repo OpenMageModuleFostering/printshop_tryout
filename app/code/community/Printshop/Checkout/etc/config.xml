@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<config>
+    <global>
+        <reference name="head">
+            <action method="setCharset"><charset>UTF-8</charset></action>
+        </reference>
+        <template>
+            <email>
+                <custom_email_template1>
+                    <label>Print shop custom email module</label>
+                    <file>printshop_custom_email1.html</file>
+                    <type>html</type>
+                </custom_email_template1>
+            </email>
+        </template>
+        <template>
+            <email>
+                <checkout_payment_failed_template translate="label" module="sales">
+                    <label>Payment Failed</label>
+                    <file>payment_failed.html</file>
+                    <type>html</type>
+                </checkout_payment_failed_template>
+            </email>
+        </template>
+        <blocks>
+            <Printshop_checkout>
+                <class>Printshop_Checkout_Block</class>
+            </Printshop_checkout>
+            <checkout>
+                <rewrite>
+                    <cart>Printshop_Checkout_Block_Cart</cart>
+                </rewrite>
+                <rewrite>
+                    <onepage_success>Printshop_Checkout_Block_Onepage_Success</onepage_success>
+                </rewrite>
+            </checkout>
+        </blocks>
+    </global>
+    <frontend>
+        <layout>
+            <updates>
+                <checkout>
+                    <file>printshop_checkout.xml</file>
+                </checkout>
+            </updates>
+        </layout>
+        <routers>
+            <checkout>
+                <args>
+                    <modules>
+                        <Printshop_Checkout before="Mage_Checkout">Printshop_Checkout</Printshop_Checkout>
+                    </modules>
+                </args>
+            </checkout>
+        </routers>
+    </frontend>
+</config>

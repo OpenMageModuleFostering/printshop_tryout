@@ -1,0 +1,38 @@
+<?php   $orderId = $this->getRequest()->getParam('order_id');
+        $order = Mage::getResourceModel('sales/order_item_collection')->addFieldToFilter('order_id', $orderId);
+        $arrPdfData = array();
+        foreach($order as $quoteItem) {
+            $quoteItemId = $quoteItem->getQuoteItemId();
+            // get product PDF...
+            $getItemDetail = Mage::getModel('sales/quote_item')->load($quoteItemId);           
+            $arrPdfData[] = $getItemDetail->getProductPdf();
+        }        
+         Mage::getSingleton('core/session')->setPdfdata($arrPdfData);
+?>
+<div class="entry-edit">
+	<div class="entry-edit-head">
+		<h4 class="icon-head head-payment-method"><?php echo Mage::helper('sales')->__('User PDF') ?></h4>
+	</div>
+<fieldset>
+        <ul class="note-list">
+            <?php
+			$arrPdfData = Mage::getSingleton('core/session')->getPdfdata();
+			
+            if(count($arrPdfData)>0){
+			foreach($arrPdfData as $productPdf)
+			{
+			
+            ?>
+
+            <a href="<?php echo $productPdf ?>" title="Design">Download User PDF</a><br />
+
+            <?php } } else {
+	    ?>
+	    No User PDF.
+	    <?php
+	    }?>
+	    
+	    
+        </ul>
+    </fieldset>	
+</div>
