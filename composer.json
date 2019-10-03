@@ -1,7 +1,7 @@
 {
-    "name": "OpenMageModuleFostering\/PrintShop_TryOut",
+    "name": "openmage-module-fostering\/printshop_tryout",
     "type": "magento-module",
-    "license": "OSL-v3.0",
+    "license": "OSL-3.0",
     "homepage": "",
     "description": "DesignTool for products. Customers create their own design online with a WYSIWYG - DesignTool and preview.",
     "authors": [
